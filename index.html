@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Project Solutions | Strategic Project Management & Scheduling</title>
+    <meta name="description" content="Strategic Project Management Solutions for Fabrication and Construction. Expert L1 to L4 schedule development, WPR & MPR reporting, and project control services.">
+    <style>
+        /* --- GLOBAL STYLES --- */
+        :root {
+            --primary-color: #004A99; /* Deep Blue for Professionalism */
+            --secondary-color: #FF6B6B; /* Accent Red/Orange for Action */
+            --text-color: #333;
+            --light-bg: #F4F7F9;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #E05A5A;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            margin-left: 25px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: var(--primary-color); /* Dark background for high contrast */
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            /* Placeholder for a professional background image/pattern */
+            background-image: url('placeholder-hero-bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: white; /* H1 in white for contrast */
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- INTRODUCTION & VALUE --- */
+        .section-intro {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section-intro h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        /* --- CORE SERVICES GRID --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 50px 20px;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.25em;
+        }
+
+        /* Placeholder for icons */
+        .icon {
+            font-size: 2em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* --- DIFFERENTIATOR --- */
+        .section-differentiator {
+            padding: 80px 20px;
+            background-color: white;
+        }
+
+        .differentiator-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .differentiator-text {
+            flex: 1;
+        }
+
+        .differentiator-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .differentiator-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* --- TESTIMONIALS --- */
+        .section-testimonial {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section-testimonial blockquote {
+            font-style: italic;
+            font-size: 1.4em;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        /* --- CLOSING CTA --- */
+        .section-cta {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .section-cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* --- RESPONSIVENESS (Mobile Adjustments) --- */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .nav-links {
+                display: none; /* Simple mobile nav hiding - typically replaced with a hamburger menu */
+            }
+
+            .differentiator-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Precision Project Solutions</a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" class="btn-primary">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Precision. Predictability. Project Control.</h1>
+            <p>Strategic Project Management Solutions for Fabrication and Construction. We deliver the detailed schedules and data needed to finish on time, every time.</p>
+            <a href="contact.html" class="btn-primary">Request a Free Project Assessment &rarr;</a>
+        </div>
+    </section>
+
+    <section class="section-intro">
+        <div class="container">
+            <h2>Stop Managing Chaos. Start Controlling Outcomes.</h2>
+            <p>In complex **Fabrication and Construction** environments, project success hinges on the clarity of your plan and the accuracy of your data. At **Precision Project Solutions**, we specialize in transforming ambiguity into absolute certainty.</p>
+            <p>We don't just build documents; we build confidence. From high-level L1 reports to detailed L4 execution schedules, our expert project control services ensure your team, stakeholders, and finances are always aligned with a single, verifiable path to completion.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container services-grid">
+            
+            <div class="service-card">
+                <span class="icon">&#9201;</span> <h3>Expert Schedule Development</h3>
+                <p>L1 to L4 schedules prepared in **Primavera P6** and **MS Project**. We establish a robust, reliable baseline for flawless execution.</p>
+                <a href="services-scheduling.html">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <span class="icon">&#128200;</span> <h3>Progress Tracking & Reporting</h3>
+                <p>Timely **weekly and monthly progress updation** with clear variance analysis and actionable forecasts.</p>
+                <a href="services-reporting.html">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <span class="icon">&#128187;</span> <h3>Executive Reporting (WPR & MPR)</h3>
+                <p>Preparation of detailed **Weekly Progress Reports (WPR)** and **Monthly Progress Reports (MPR)** to keep all stakeholders fully informed.</p>
+                <a href="services-reporting.html">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <span class="icon">&#128227;</span> <h3>Strategic Quarterly Presentations</h3>
+                <p>High-impact, executive-level presentations that distill complex project data into clear, concise updates for senior management and board members.</p>
+                <a href="services-reporting.html">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <span class="icon">&#128736;</span> <h3>Project Management Consultancy</h3>
+                <p>Specialized strategic oversight and hands-on support for your most challenging **fabrication and construction projects**.</p>
+                <a href="services-consulting.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-differentiator">
+        <div class="container differentiator-content">
+            <div class="differentiator-text">
+                <h2>The Precision Difference</h2>
+                <p>We know that vague estimates lead to real-world delays. That’s why **Precision Project Solutions** operates with a focus on granular detail and technical mastery.</p>
+                
+                <ul class="differentiator-list">
+                    <li>**Software Expertise:** Masters of **Primavera P6** and **MS Project**, ensuring your schedules are technically sound and defensible.</li>
+                    <li>**Industry Focus:** Deep experience in **Construction & Fabrication**, understanding the critical path nuances of your unique environment.</li>
+                    <li>**Data-Driven Predictability:** Reliable forecasting and early warnings using proven methodologies like Earned Value Management.</li>
+                </ul>
+                <a href="about.html" class="btn-primary">Meet Our Expert Team &rarr;</a>
+            </div>
+            <img src="placeholder-gantt-chart.jpg" alt="Gantt Chart and Project Data" style="max-width: 400px; height: auto; border-radius: 8px; flex-shrink: 0;">
+        </div>
+    </section>
+
+    <section class="section-testimonial">
+        <div class="container">
+            <h2>Client Confidence</h2>
+            <blockquote>
+                "Precision Project Solutions turned our chaotic schedule data into a clean, management-ready MPR in under two weeks. Their L4 schedule was the roadmap that saved our project from critical delay. Truly professional and highly recommended."
+            </blockquote>
+            <p>— **[Name]**, Director of Operations, Infrastructure Development Firm</p>
+        </div>
+    </section>
+
+    <section class="section-cta">
+        <div class="container">
+            <h2>Ready to Gain Absolute Control?</h2>
+            <p>Stop reacting to problems and start proactively managing your project's success.</p>
+            <a href="contact.html" class="btn-primary">Schedule a Discovery Call Today &rarr;</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Precision Project Solutions. All rights reserved.</p>
+            <p>
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="terms.html">Terms of Service</a> |
+                <a href="contact.html">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
